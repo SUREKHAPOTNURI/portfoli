@@ -1,0 +1,936 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Surekha Potnuri | Software Developer</title>
+
+  <style>
+
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 5rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--bg);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      color: white;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--card-bg);
+      padding-bottom: 0.5rem;
+    }
+
+    /* ABOUT */
+
+    .about-text {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* GRID */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+      );
+      gap: 1.5rem;
+    }
+
+    /* CARDS */
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background: var(--bg);
+      color: var(--accent);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* LINKS */
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* SKILLS */
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-item {
+      background-color: var(--card-bg);
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .skill-item:hover {
+      background-color: var(--accent);
+      color: var(--bg);
+    }
+
+    /* EDUCATION */
+
+    .education-card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .education-card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .education-card p {
+      color: var(--text-muted);
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .contact-item {
+      margin-bottom: 1rem;
+    }
+
+    .contact-item strong {
+      color: var(--text);
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        padding: 1.2rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <h1>
+      Hi, I'm
+      <span style="color: var(--accent);">
+        Surekha Potnuri
+      </span>
+    </h1>
+
+    <p class="subtitle">
+      B.Sc Computer Science Student | Aspiring Software Developer
+    </p>
+
+    <p>
+      Passionate about Software Development, Web Technologies,
+      and building real-world applications.
+    </p>
+
+    <a href="#contact" class="btn">
+      Get In Touch
+    </a>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+      <h2>About Me</h2>
+
+      <p class="about-text">
+
+        I am Surekha Potnuri, a B.Sc Computer Science student at
+        Aditya Degree Women's College, Andhra University.
+        I am passionate about software development and web technologies.
+        I enjoy creating practical projects and learning new technologies.
+        My career goal is to become a Software Developer and continuously
+        improve my technical and problem-solving skills.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+      <h2>Education</h2>
+
+
+      <div class="education-card">
+
+        <h3>
+          B.Sc Computer Science
+        </h3>
+
+        <p>
+          Aditya Degree Women's College,
+          Andhra University
+        </p>
+
+        <p>
+          2024 – 2027 | CGPA: 8.67
+        </p>
+
+      </div>
+
+
+      <div class="education-card">
+
+        <h3>
+          Intermediate
+        </h3>
+
+        <p>
+          Board of Intermediate Education,
+          Andhra Pradesh
+        </p>
+
+        <p>
+          2024 | GPA: 7.72
+        </p>
+
+      </div>
+
+
+      <div class="education-card">
+
+        <h3>
+          SSC / 10th Class
+        </h3>
+
+        <p>
+          Andhra Pradesh State Board
+        </p>
+
+        <p>
+          2021 | GPA: 9.98
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+      <h2>
+        Featured Projects
+      </h2>
+
+
+      <div class="grid">
+
+
+        <!-- SERVICE NEST -->
+
+        <div class="card">
+
+          <div>
+
+            <h3>
+              ServiceNest
+            </h3>
+
+            <p>
+
+              A full-stack service booking web application
+              where users can explore services and book service
+              providers. The application includes a React frontend,
+              Node.js and Express.js backend, MongoDB database,
+              booking form, and booking management.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span class="tag">
+                React.js
+              </span>
+
+              <span class="tag">
+                Node.js
+              </span>
+
+              <span class="tag">
+                Express.js
+              </span>
+
+              <span class="tag">
+                MongoDB
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="links">
+
+            <a
+              href="https://github.com/SUREKHAPOTNURI"
+              target="_blank">
+
+              GitHub
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SMART AGRO -->
+
+        <div class="card">
+
+          <div>
+
+            <h3>
+              SmartAgro
+            </h3>
+
+            <p>
+
+              A smart agriculture and farmer-support website
+              designed to help farmers with crop recommendations,
+              weather information, disease guidance, irrigation
+              information, farming tips, and agricultural market
+              information.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span class="tag">
+                HTML5
+              </span>
+
+              <span class="tag">
+                CSS3
+              </span>
+
+              <span class="tag">
+                JavaScript
+              </span>
+
+              <span class="tag">
+                Weather API
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="links">
+
+            <a
+              href="https://github.com/SUREKHAPOTNURI"
+              target="_blank">
+
+              GitHub
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- WEATHER APP -->
+
+        <div class="card">
+
+          <div>
+
+            <h3>
+              Weather App
+            </h3>
+
+            <p>
+
+              A weather application that provides weather
+              information based on the selected location.
+              The project demonstrates API integration and
+              a simple user-friendly interface.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span class="tag">
+                HTML5
+              </span>
+
+              <span class="tag">
+                CSS3
+              </span>
+
+              <span class="tag">
+                JavaScript
+              </span>
+
+              <span class="tag">
+                Weather API
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="links">
+
+            <a
+              href="https://github.com/SUREKHAPOTNURI/Weather-App"
+              target="_blank">
+
+              GitHub
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+      <h2>
+        Skills & Technologies
+      </h2>
+
+
+      <div class="skills-list">
+
+        <div class="skill-item">
+          C
+        </div>
+
+        <div class="skill-item">
+          Java
+        </div>
+
+        <div class="skill-item">
+          Python
+        </div>
+
+        <div class="skill-item">
+          HTML5
+        </div>
+
+        <div class="skill-item">
+          CSS3
+        </div>
+
+        <div class="skill-item">
+          JavaScript
+        </div>
+
+        <div class="skill-item">
+          React.js
+        </div>
+
+        <div class="skill-item">
+          Node.js
+        </div>
+
+        <div class="skill-item">
+          Express.js
+        </div>
+
+        <div class="skill-item">
+          MongoDB
+        </div>
+
+        <div class="skill-item">
+          Git
+        </div>
+
+        <div class="skill-item">
+          GitHub
+        </div>
+
+        <div class="skill-item">
+          VS Code
+        </div>
+
+        <div class="skill-item">
+          Postman
+        </div>
+
+        <div class="skill-item">
+          Windows
+        </div>
+
+        <div class="skill-item">
+          Linux
+        </div>
+
+        <div class="skill-item">
+          Microsoft Excel
+        </div>
+
+        <div class="skill-item">
+          PowerPoint
+        </div>
+
+        <div class="skill-item">
+          Figma
+        </div>
+
+        <div class="skill-item">
+          Canva
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section id="certifications">
+
+      <h2>
+        Certifications & Activities
+      </h2>
+
+
+      <div class="grid">
+
+
+        <div class="card">
+
+          <h3>
+            Project Management
+          </h3>
+
+          <p>
+
+            Introduction to Project Management,
+            Project Management Fundamentals,
+            Team Building and Leadership,
+            and Stakeholder Engagement.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+          <h3>
+            Web Development
+          </h3>
+
+          <p>
+
+            Introduction to HTML,
+            HTML & CSS: Building a Single-Page Website,
+            JavaScript Form Validation,
+            and Build Your First React Website.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+          <h3>
+            Data & Cloud
+          </h3>
+
+          <p>
+
+            Introduction to Data Engineering
+            and Introduction to Security Principles
+            in Cloud Computing.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+          <h3>
+            Hackathon & Activities
+          </h3>
+
+          <p>
+
+            Adhoc Aditya Tech Fusion Hackathon,
+            Adhoc Aditya IdeaStorm UI/UX activity,
+            AI & ML Research Program,
+            and Startup Business Management program.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CODING PROFILES ================= -->
+
+    <section id="profiles">
+
+      <h2>
+        Coding Profiles
+      </h2>
+
+
+      <div class="links">
+
+        <a
+          href="https://leetcode.com/u/Surekha01_/"
+          target="_blank">
+
+          LeetCode
+
+        </a>
+
+
+        <a
+          href="https://www.codechef.com/users/shy_cattle_33"
+          target="_blank">
+
+          CodeChef
+
+        </a>
+
+
+        <a
+          href="https://codeforces.com/profile/potnuri_surekha"
+          target="_blank">
+
+          Codeforces
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+      <h2>
+        Contact Me
+      </h2>
+
+
+      <div class="contact-box">
+
+
+        <!-- PHONE -->
+
+        <div class="contact-item">
+
+          <strong>
+            📱 Phone:
+          </strong>
+
+          <a href="tel:+91 9704469469">
+
+            +91 9704469469
+
+          </a>
+
+        </div>
+
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-item">
+
+          <strong>
+            📧 Email:
+          </strong>
+
+          <a href="surekhapotnuri01@gmail.com">
+
+            surekhapotnuri01@gmail.com
+
+          </a>
+
+        </div>
+
+
+
+        <!-- LINKEDIN -->
+
+        <div class="contact-item">
+
+          <strong>
+            💼 LinkedIn:
+          </strong>
+
+          <a
+            href="https://www.linkedin.com/in/surekha-potnuri-942b313aa"
+            target="_blank">
+
+            LinkedIn Profile
+
+          </a>
+
+        </div>
+
+
+
+        <!-- GITHUB -->
+
+        <div class="contact-item">
+
+          <strong>
+            🐙 GitHub:
+          </strong>
+
+          <a
+            href="https://github.com/SUREKHAPOTNURI"
+            target="_blank">
+
+            github.com/SUREKHAPOTNURI
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+
+      © <span id="year"></span>
+      Surekha Potnuri.
+      Built with HTML, CSS & JavaScript.
+
+    </p>
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+
+</body>
+
+</html>
+```
